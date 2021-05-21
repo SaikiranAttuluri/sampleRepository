@@ -1,0 +1,103 @@
+1st one 
+
+n = input().split()
+ln = len(n)-1
+a = input()
+for i in range(ln,0,-1):
+    if n[i] == a:
+        print(i)
+        break
+
+
+2nd one 
+
+def is_prime(num):
+    if num ==1:
+        return False
+    prime_number=0
+    for j in range(2,num):
+        if (i%j)==0:
+            prime_number=prime_number+1
+    if prime_number==0:
+         return True
+    else:
+        return False
+
+summ = 0   
+a  = int(input())
+b = int(input())
+for i in range(a,b+1):
+    if(is_prime(i)):
+        summ += i 
+print(summ)
+    
+    
+3rd one 
+
+def is_prime(num):
+    if num ==1:
+        return False
+    prime_number=0
+    for j in range(2,num):
+        if (i%j)==0:
+            prime_number=prime_number+1
+    if prime_number==0:
+         return True
+    else:
+        return False
+
+x = input().split()
+x = [int(i) for i in x]
+result = 0
+for i in x:
+    if(is_prime(i)):
+        result = result+ i
+
+print(result)
+
+
+4th one 
+
+a = input()
+str_numbers = ""
+str_alphabets = ""
+for i in a:
+    if ord(i) <= 92 :
+        str_numbers+=i
+    else:
+        str_alphabets+=i
+print(str_numbers+str_alphabets)
+
+
+
+5th one
+import statistics
+
+def find_mean(num_list):
+    n = len(num_list)
+    total = sum(num_list)
+    result = total/n
+    print("Mean: " + str(round(result,2)))
+
+def find_median(num_list):
+    print("Median: "+str(statistics.median(num_list)))
+
+
+def find_mode(num_list):
+    x = statistics.multimode(num_list)
+    x.sort()
+    x = [str(i) for i in x]
+    t = " ".join(x)
+    print("Mode: "+ t)
+    
+    
+
+
+num_list = list(map(int, input().split()))
+
+find_mean(num_list)
+find_median(num_list)
+find_mode(num_list)
+
+
+   
